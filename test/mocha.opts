@@ -1,1 +1,1 @@
---require test/support/common
+--require test/support/common --timeout 100000

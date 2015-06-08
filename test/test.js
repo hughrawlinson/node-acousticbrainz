@@ -12,4 +12,69 @@ describe('AcousticBrainz', function() {
             done();
         });
     });
+    
+    it('should return a high level feature set when requested', function(done){
+        ab.get({
+            id:validMBID,
+            type:'high-level',
+        },function(err, data){
+            should.not.exist(err);
+            should.exist(data);
+            should.exist(data.highlevel);
+            done();
+        });
+    });
+    
+    it('should return a low level feature set when requested', function(done){
+        ab.get({
+            id:validMBID,
+            type:'low-level',
+        },function(err, data){
+            should.not.exist(err);
+            should.exist(data);
+            should.exist(data.lowlevel);
+            done();
+        });
+    });
+
+    it('should error with an invalid MBID',function(done){
+        try{
+        ab.get({
+            id:'invalidMBID', 
+        },function(err,data){
+            should.exist(err);
+            done();
+        });}catch(e){
+            console.log(e);
+        }
+    });
+
+    it('should return a count when asked',function(done){
+        ab.get({
+            id:validMBID,
+            type:'count'
+        },function(err,data){
+            should.not.exist(err);
+            should.exist(data);
+            should.exist(data.count);
+            done();
+        });
+    });
+    // it('should return different records when queried',function(done){
+    //     ab.get({
+    //         id:validMBID,
+    //         n:0
+    //     },function(err,data){
+    //         should.not.exist(err);
+    //         should.exist(data);
+    //         ab.get({
+    //             id:validMBID,
+    //             n:1
+    //         },function(err,data2){
+    //             should.not.exist(err);
+    //             should.exist(data2);
+                
+    //         });
+    //     });
+    // });
 });
