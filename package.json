@@ -1,0 +1,33 @@
+{
+  "name": "node-acousticbrainz",
+  "version": "1.0.0",
+  "description": "A Wrapper for the AcousticBrainz API",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hughrawlinson/node-acousticbrainz.git"
+  },
+  "keywords": [
+    "musicbrainz",
+    "acousticbrainz",
+    "mir",
+    "audio",
+    "musicdata"
+  ],
+  "author": "Hugh Rawlinson <hugh@codeoclock.net> (http://www.hughrawlinson.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hughrawlinson/node-acousticbrainz/issues"
+  },
+  "homepage": "https://github.com/hughrawlinson/node-acousticbrainz",
+  "dependencies": {
+    "request": "^2.57.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
