@@ -9,7 +9,6 @@ describe('AcousticBrainz', function() {
         ab.get(validMBID, function(err, data) {
             should.not.exist(err);
             should.exist(data);
-            console.log(data);
             done();
         });
     });
