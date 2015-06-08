@@ -38,15 +38,12 @@ describe('AcousticBrainz', function() {
     });
 
     it('should error with an invalid MBID',function(done){
-        try{
         ab.get({
             id:'invalidMBID', 
         },function(err,data){
-            should.exist(err);
+            err.should.be.an.instanceof(Error);
             done();
-        });}catch(e){
-            console.log(e);
-        }
+        });
     });
 
     it('should return a count when asked',function(done){
