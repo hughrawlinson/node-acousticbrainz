@@ -13,6 +13,6 @@ So this is a library and I guess if there's a library it should be able to be us
 * step one: install node-acousticbrainz by executing `npm install --save node-acousticbrainz` in your project directory
 * step two: require it in a js file `var AcousticBrainz = require('node-acousticbrainz');`
 * step three: instantiate an acousticbrainz fetcher instance `var acousticbrainzfetcherinstance = new AcousticBrainz()`
-* step four: get something from it `acousticbrainzfetcherinstance.get('id','type',function(error, data){console.log(data);});
+* step four: get something from it `acousticbrainzfetcherinstance.get('id','type',function(error, data){console.log(data);});`
   * to know what 'id' and 'type' mean, read the [acousticbrainz documentation](http://api.acousticbrainz.com)
 * now sit back, relax, and write some awesome code to use the dataz
