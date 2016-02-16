@@ -1,18 +1,29 @@
 # node-acousticbrainz [![Build Status](https://img.shields.io/travis/hughrawlinson/node-acousticbrainz.svg?style=flat-square)](https://travis-ci.org/hughrawlinson/node-acousticbrainz/)
 A Wrapper for the AcousticBrainz API
 
-So this is a library and I guess if there's a library it should be able to be used, and people should be able to read some words to make themselves understand how to make it work, so here is some...
+# Documentation
 
-## Dock you men tay shun
+Start by installing `node-acousticbrainz` in your project. You can do this with the following shell command:
 
-* pree wreck wizz its
-  * javascript
-  * node js install
-  * npm
-  * an understanding of the above
-* step one: install node-acousticbrainz by executing `npm install --save node-acousticbrainz` in your project directory
-* step two: require it in a js file `var AcousticBrainz = require('node-acousticbrainz');`
-* step three: instantiate an acousticbrainz fetcher instance `var acousticbrainzfetcherinstance = new AcousticBrainz()`
-* step four: get something from it `acousticbrainzfetcherinstance.get('id','type',function(error, data){console.log(data);});`
-  * to know what 'id' and 'type' mean, read the [acousticbrainz documentation](http://acousticbrainz.org/data)
-* now sit back, relax, and write some awesome code to use the dataz
+`npm install --save node-acousticbrainz`
+
+In the file that you want to use `node-acousticbrainz`, you should require it with:
+
+`var AcousticBrainz = require('node-acousticbrainz');`
+
+That line will vary if you're using ES2015 syntax, or an alternate module loader, but if you're doing those things you probably know how to require code in your chosen platform.
+
+
+Instantiate an object:
+
+`var ab = new AcousticBrainz();`
+
+You can then use `ab` to fetch data from Acousticbrainz:
+
+`ab.get('id','type',function(err,data){
+  // here you have access to your data!
+});`
+
+The arguments to the `get` function, `id` and `type`, are documented in the [Acousticbrainz documentation](http://acousticbrainz.org/data)
+
+Happy hacking!
