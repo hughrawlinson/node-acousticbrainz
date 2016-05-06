@@ -12,7 +12,7 @@ describe('AcousticBrainz', function() {
             done();
         });
     });
-    
+
     it('should return a high level feature set when requested', function(done){
         ab.get({
             id:validMBID,
@@ -24,7 +24,7 @@ describe('AcousticBrainz', function() {
             done();
         });
     });
-    
+
     it('should return a low level feature set when requested', function(done){
         ab.get({
             id:validMBID,
@@ -40,7 +40,8 @@ describe('AcousticBrainz', function() {
     it('should error with an invalid MBID',function(done){
         ab.get({
             id:'invalidMBID', 
-        },function(err,data){
+        },function(err,data,response){
+          console.log(response);
             err.should.be.an.instanceof(Error);
             done();
         });
@@ -70,7 +71,6 @@ describe('AcousticBrainz', function() {
     //         },function(err,data2){
     //             should.not.exist(err);
     //             should.exist(data2);
-                
     //         });
     //     });
     // });
